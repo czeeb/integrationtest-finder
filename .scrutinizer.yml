@@ -1,2 +1,3 @@
 tools:
   rubocop: true
+  external_code_coverage: true

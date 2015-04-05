@@ -1,5 +1,7 @@
 # Integration Test Finder
 
+[![Build Status](https://travis-ci.org/czeeb/integrationtest-finder.svg)](https://travis-ci.org/czeeb/integrationtest-finder) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/czeeb/integrationtest-finder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/czeeb/integrationtest-finder/?branch=master)
+
 This Ruby Gem was borne out of the idea to reuse serverspec tests in chef recipes as part of a server's monitoring.  The initial implementation just looks for custom recipes in AWS OpsWorks.  It does not attempt to resolve dependencies and look for tests there.  It also only currently supports serverspec, although other integration test frameworks may be supported in the future.
 
 The goal was to programmatically find and run the tests depending on what recipes were run on the server.

@@ -12,12 +12,16 @@
 # The above copyright notice and this permission notice shall be included in all
 # copies or substantial portions of the Software.
 
-# Comment
+# Base class. Not very useful on its own.
 class IntegrationtestFinder
+  # Initializes the IntegrationtestFinder class
   def initialize
     @targets = []
   end
 
+  # Adds targets
+  #
+  # @param [String] serverspec_dir
   def add_to_targets(serverspec_dir)
     Dir.glob(serverspec_dir).each do |dir|
       next unless File.directory?(dir)
@@ -25,6 +29,9 @@ class IntegrationtestFinder
     end
   end
 
+  # Returns list of targets
+  #
+  # @return [Array] List of directories that should contain integration tests
   def fetch_targets
     @targets.uniq
   end

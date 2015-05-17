@@ -10,4 +10,5 @@ gem 'simplecov', group:  [:development, :test]
 gem 'guard', group:  :development
 gem 'guard-rubocop', group:  :development
 gem 'guard-rspec', group:  :development
+gem 'yard', group:  :development
 gem 'scrutinizer-ocular', group: :test

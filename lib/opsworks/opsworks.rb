@@ -16,9 +16,8 @@ require 'aws-sdk'
 require 'yaml'
 require_relative '../integrationtest_finder'
 
-# comment goes here
 class IntegrationtestFinder
-  # comment goes here
+  # Opsworks child class extending IntegrationtestFinder
   class Opsworks < IntegrationtestFinder
     attr_accessor :client
     def initialize
@@ -28,6 +27,8 @@ class IntegrationtestFinder
       @client = Aws::OpsWorks::Client.new(region: 'us-east-1')
     end
 
+    # Locate cookbooks with serverspec tests that follow the standard location
+    # for Chef Kitchen CI Busser
     def find_serverspecs
       instance_resp = describe_instance
 
